@@ -26,10 +26,14 @@ export class MomentFormComponent implements OnInit {
     return this.momentForm.get('title')!
   }
   get description(){
-    return this.momentForm.get('descrition')!
+    return this.momentForm.get('description')!
   }
 
   submit(){
+
+    if(this.momentForm.invalid){
+      return;
+    }
     console.log('Envidou formulário!')
   }
 
